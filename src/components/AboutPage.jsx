@@ -1,0 +1,10 @@
+function AboutPage() {
+  return (
+    <div>
+      <h1 className="text-3xl font-bold">About Us</h1>
+      <p className="mt-4">Learn more about our mission and values.</p>
+    </div>
+  );
+}
+
+export default AboutPage;
