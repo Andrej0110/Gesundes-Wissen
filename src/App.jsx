@@ -1,21 +1,19 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Sidebar from "./components/Sidebar.jsx";
-import AboutPage from "./components/AboutPage.jsx";
-import ContactPage from "./components/ContactPage.jsx";
-import EntgiftenAusleiten from "./components/EntgiftenAusleiten.jsx";
+import HomePage from "./components/HomePage";
+import AboutPage from "./components/AboutPage";
+import ContactPage from "./components/ContactPage";
+import BlogPage from "./components/BlogPage";
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="flex min-h-screen">
-        <Sidebar />
-        <div className="flex-1 p-6">
-          <Routes>
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/entgiften" element={<EntgiftenAusleiten />} />
-          </Routes>
-        </div>
+      <div className="min-h-screen bg-gray-100 p-6">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/blog" element={<BlogPage />} />
+        </Routes>
       </div>
     </BrowserRouter>
   );
